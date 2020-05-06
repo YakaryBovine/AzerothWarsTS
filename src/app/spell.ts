@@ -1,4 +1,6 @@
-import { Unit, Trigger } from "w3ts";
+/** @noSelfInFile **/
+
+import { Trigger, Unit } from "w3ts";
 
 export abstract class Spell {
   private static _objectId: number
@@ -19,7 +21,7 @@ export abstract class Spell {
     whichUnit.addAbility(Spell._objectId)
   }
 
-  constructor(whichUnit: Unit) {
+  public constructor(whichUnit: Unit) {
     this.unit = whichUnit
 
     if (Spell.onCast) {
