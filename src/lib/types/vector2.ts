@@ -1,8 +1,6 @@
 /** @noSelfInFile **/
 
-export function vectorFromUnit(u: unit): Vector2 {
-  return new Vector2(GetUnitX(u), GetUnitY(u));
-}
+import { Trigger, Unit } from "w3ts";
 
 export class Vector2 {
   public x: number;
@@ -90,7 +88,17 @@ export class Vector2 {
       return "Vector2={x:"+this.x+", y:"+this.y+",len:"+this.getLength()+"}";
   }
 
+  distanceTo(where: Vector2) : number {
+    const a = this.x - where.x;
+    const b = this.y - where.y;
+    return Math.sqrt(a*a + b*b);
+  }
+
   angleTo(where: Vector2) {
       return Rad2Deg(Atan2(where.y-this.y, where.x-this.x));
+  }
+
+  static fromUnit(u: Unit): Vector2 {
+    return new Vector2(u.x, u.y);
   }
 }

@@ -1,55 +1,92 @@
 ﻿STRING 1
 {
-TypeScript Template
+Chain Lightning
 }
 
 STRING 2
 {
-Any
+doot doot
 }
 
 STRING 3
 {
-Nondescript
+Chain Lightning
 }
 
 STRING 4
 {
-TriggerHappy
+[|cffffcc00Q|r] Reaping Hour - [|cffffcc00Level 2|r]
 }
 
 STRING 5
+// Abilities: A000 (Chain Lightning), Tip (Tooltip - Normal)
 {
-Player 1
+[|cffffcc00Q|r] Reaping Hour - [|cffffcc00Level 3|r]
 }
 
 STRING 6
+// Abilities: A000 (Chain Lightning), Hotkey (Hotkey - Normal)
 {
-Player 2
+Q
 }
 
 STRING 7
+// Abilities: A000 (Chain Lightning), Researchhotkey (Hotkey - Learn)
 {
-Player 3
+R
 }
 
 STRING 8
+// Abilities: A000 (Chain Lightning), Researchtip (Tooltip - Learn)
 {
-Force 1
+[|cffffcc00R|r] Learn Reaping Hour - [|cffffcc00Level %d|r]
 }
 
 STRING 9
+// Abilities: A000 (Chain Lightning), Tip (Tooltip - Normal)
 {
-Force 2
+[|cffffcc00Q|r] Moonlit Arrow - [|cffffcc00Level 4|r]
 }
 
 STRING 10
+// Abilities: A000 (Chain Lightning), Researchubertip (Tooltip - Learn - Extended)
 {
-Player 4
+Conjures 7 spectral horsemen that charge to the target location, dealing damage to each enemy unit struck. Deals 1% additional damage for each 1% of hit points the damaged unit is missing.  |n|n|cffffcc00Level 1|r - Deals 300 damage.|n|cffffcc00Level 2|r - Deals 400 damage. |n|cffffcc00Level 3|r - Deals 500 damage.
 }
 
 STRING 11
+// Abilities: A000 (Chain Lightning), Ubertip (Tooltip - Normal - Extended)
 {
-Player 12
+Conjures 7 spectral horsemen that charge to the target location, dealing 400 damage to each enemy unit struck. Deals 1% additional damage for each 1% of hit points the damaged unit is missing.
+}
+
+STRING 12
+// Abilities: A000 (Chain Lightning), Ubertip (Tooltip - Normal - Extended)
+{
+Conjures 7 spectral horsemen that charge to the target location, dealing 500 damage to each enemy unit struck. Deals 1% additional damage for each 1% of hit points the damaged unit is missing.
+}
+
+STRING 13
+// Abilities: A000 (Chain Lightning), Name (Name)
+{
+Chain Lightning
+}
+
+STRING 14
+// Abilities: A000 (Chain Lightning), Ubertip (Tooltip - Normal - Extended)
+{
+doot doot
+}
+
+STRING 15
+// Abilities: A000 (Chain Lightning), Tip (Tooltip - Normal)
+{
+Chain Lightning
+}
+
+STRING 16
+// Abilities: A000 (Chain Lightning), Tip (Tooltip - Normal)
+{
+[|cffffcc00Q|r] Reaping Hour - [|cffffcc00Level 2|r]
 }
 
