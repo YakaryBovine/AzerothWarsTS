@@ -3,6 +3,7 @@ import { Trigger, Unit, Group, Effect } from "w3ts";
 
 export class CounterStrike implements Spell {
   readonly objectId:number = FourCC("Aabs")
+  readonly name:string = "Counterstrike"
   private _chance:number = 0.7
   private _damage:number = 40
   private _radius:number = 200

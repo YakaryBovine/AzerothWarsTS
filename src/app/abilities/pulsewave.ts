@@ -7,11 +7,15 @@ const VEL:number = 400
 const RADIUS:number = 50
 
 class MiniWave extends Projectile {
-  
+
 }
 
 class BigWave extends Projectile {
   private _damage:number
+
+  protected onTick(){
+    
+  }
 
   constructor(attacker:Unit, x:number, y:number, face:number, damage:number){
     super(attacker, x, y, face)
@@ -24,6 +28,7 @@ class BigWave extends Projectile {
 
 export class PulseWave implements Spell {
   readonly objectId:number = FourCC("ACsh")
+  readonly name:string = "Pulse Wave"
 
   onCast(caster:Unit){
     new BigWave(caster, caster.x, caster.y, caster.facing, 100)

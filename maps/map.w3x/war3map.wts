@@ -90,3 +90,87 @@ STRING 16
 [|cffffcc00Q|r] Reaping Hour - [|cffffcc00Level 2|r]
 }
 
+STRING 17
+// Abilities: A001 (Bloodlust), Name (Name)
+{
+Bloodlust
+}
+
+STRING 18
+// Abilities: A001 (Bloodlust), Ubertip (Tooltip - Normal - Extended)
+{
+doot doot
+}
+
+STRING 19
+// Abilities: A001 (Bloodlust), Tip (Tooltip - Normal)
+{
+Bloodlust
+}
+
+STRING 20
+// Abilities: A001 (Bloodlust), Tip (Tooltip - Normal)
+{
+[|cffffcc00Q|r] Reaping Hour - [|cffffcc00Level 2|r]
+}
+
+STRING 21
+// Abilities: A001 (Bloodlust), Tip (Tooltip - Normal)
+{
+[|cffffcc00Q|r] Reaping Hour - [|cffffcc00Level 3|r]
+}
+
+STRING 22
+// Abilities: A001 (Bloodlust), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 23
+// Abilities: A001 (Bloodlust), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 24
+// Abilities: A001 (Bloodlust), Researchtip (Tooltip - Learn)
+{
+[|cffffcc00R|r] Learn Reaping Hour - [|cffffcc00Level %d|r]
+}
+
+STRING 25
+// Abilities: A001 (Bloodlust), Tip (Tooltip - Normal)
+{
+[|cffffcc00Q|r] Moonlit Arrow - [|cffffcc00Level 4|r]
+}
+
+STRING 26
+// Abilities: A001 (Bloodlust), Researchubertip (Tooltip - Learn - Extended)
+{
+Conjures 7 spectral horsemen that charge to the target location, dealing damage to each enemy unit struck. Deals 1% additional damage for each 1% of hit points the damaged unit is missing.  |n|n|cffffcc00Level 1|r - Deals 300 damage.|n|cffffcc00Level 2|r - Deals 400 damage. |n|cffffcc00Level 3|r - Deals 500 damage.
+}
+
+STRING 27
+// Abilities: A001 (Bloodlust), Ubertip (Tooltip - Normal - Extended)
+{
+Conjures 7 spectral horsemen that charge to the target location, dealing 400 damage to each enemy unit struck. Deals 1% additional damage for each 1% of hit points the damaged unit is missing.
+}
+
+STRING 28
+// Abilities: A001 (Bloodlust), Ubertip (Tooltip - Normal - Extended)
+{
+Conjures 7 spectral horsemen that charge to the target location, dealing 500 damage to each enemy unit struck. Deals 1% additional damage for each 1% of hit points the damaged unit is missing.
+}
+
+STRING 29
+// Abilities: A002 (Bloodlust), Name (Name)
+{
+Bloodlust
+}
+
+STRING 30
+// Abilities: A002 (Bloodlust), EditorSuffix (Editor Suffix)
+{
+(Buff)
+}
+

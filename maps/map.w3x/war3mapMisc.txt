@@ -1,0 +1,3 @@
+[Misc]
+MaxBldgSpeed=1000.0
+

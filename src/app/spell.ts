@@ -1,13 +1,19 @@
 /** @noSelfInFile **/
 
-import { Trigger, Unit } from "w3ts";
+import { Trigger } from "w3ts";
+import { UnitEx } from "app/UnitEx";
 
 export interface Spell {
-  readonly objectId: number
-  onCast?:(caster:Unit)=>void
+  readonly name:string
+  readonly objectId:number
+  readonly magic?:boolean
+  duration?:number
+
+  onCast?:(caster:UnitEx, target?:UnitEx)=>void
+  onTick?:(caster:UnitEx, tick:number)=>void
   onDamaged?:()=>void
   onDamage?:()=>void
   onOrder?:()=>void
-  onAcquire?:(caster:Unit)=>void
-  onUnacquire?:(caster:Unit)=>void
+  onLearn?:(caster:UnitEx)=>void
+  onUnlearn?:(caster:UnitEx)=>void
 }

@@ -12,8 +12,7 @@ export abstract class Projectile {
   protected _radius:number
   protected _zOffset:number
 
-  onTick?:()=>void
-  onHit?:(target:Unit)=>void
+  protected onTick(){}
 
   protected set modelPath(modelPath:string){
     if (this._effect) {

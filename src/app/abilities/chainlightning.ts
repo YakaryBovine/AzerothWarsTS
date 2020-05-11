@@ -1,6 +1,7 @@
 import { Spell } from "app/spell";
-import { Unit, Timer, Group, MapPlayer, Effect } from "w3ts";
+import { Timer, Group, MapPlayer, Effect } from "w3ts";
 import { Vector2 } from "lib/types/vector2";
+import { UnitEx } from "app/unitEx";
 
 const lightningDur:number = 0.4
 const secondaryLightningDur:number = 0.3
@@ -8,11 +9,12 @@ const bounceDelay:number = 0.1
 
 export class ChainLightning implements Spell {
   readonly objectId:number = FourCC("A000")
+  readonly name:string = "Chain Lightning"
   private _damage:number = 100
   private _radius:number = 450
   private _maxBounces:number = 14
 
-  private bolt(caster:Unit, previousTarget:Unit, target:Unit, bouncesRemaining:number, struckTargets:Set<Unit>){
+  private bolt(caster:UnitEx, previousTarget:UnitEx, target:UnitEx, bouncesRemaining:number, struckTargets:Set<UnitEx>){
     //Primary lightning effect
     const tempLightning:lightning = AddLightning("CLPB", false, previousTarget.x, previousTarget.y, target.x, target.y)
     const lightningTimer = new Timer()
@@ -20,6 +22,7 @@ export class ChainLightning implements Spell {
     lightningTimer.start(lightningDur, false, function(){
       DestroyLightning(tempLightning)
       lightningTimer.destroy()
+      //Secondary lightning effect
       const secondaryLightning:lightning = AddLightning("CLSB", false, previousTarget.x, previousTarget.y, target.x, target.y)
       const secondaryLightningTimer = new Timer()
       secondaryLightningTimer.start(secondaryLightningDur, false, function(){
@@ -27,7 +30,6 @@ export class ChainLightning implements Spell {
         secondaryLightningTimer.destroy()
       })
     })
-    //Secondary lightning effect
     
     //Damage
     struckTargets.add(target)
@@ -41,10 +43,10 @@ export class ChainLightning implements Spell {
       const eligibleTargets = new Group()
       eligibleTargets.enumUnitsInRange(target.x, target.y, this._radius, null)
 
-      let closestUnit:Unit
+      let closestUnit:UnitEx
       let closestDist:number = 0
       eligibleTargets.for(function(){
-        let enumUnit = Group.getEnumUnit()
+        let enumUnit = UnitEx.fromHandle(GetEnumUnit())
         if (enumUnit != null  && enumUnit.isAlive() && enumUnit.isEnemy(caster.owner) && !struckTargets.has(enumUnit)){
           const dist = Vector2.fromUnit(target).distanceTo(Vector2.fromUnit(enumUnit))
           if (dist > closestDist) {
@@ -60,8 +62,7 @@ export class ChainLightning implements Spell {
     })
   }
 
-  onCast(){
-    const caster:Unit = Unit.fromHandle(GetTriggerUnit())
-    this.bolt(caster, caster, Unit.fromHandle(GetSpellTargetUnit()), this._maxBounces, new Set<Unit>())
+  onCast(caster:UnitEx, target:UnitEx){
+    this.bolt(caster, caster, target, this._maxBounces, new Set<UnitEx>())
   }
 }
